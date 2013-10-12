@@ -1,0 +1,14 @@
+{
+    "name": "hxcommonjs",
+    "url": "https://github.com/imcj/hxcommonjs/",
+    "license": "MIT",
+    "classPath": "src/",
+    "tags": ["js"],
+    "description": "",
+    "contributors": ["imcj"],
+    "releasenote": "Initialize.",
+    "version": "0.0.1",
+    "dependencies": {
+        "logging": ""
+    }
+}

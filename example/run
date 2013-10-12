@@ -1,0 +1,4 @@
+#!/bin/sh
+
+haxe -cp ../src -cp . -main Main -js build/example.js -D js-classic
+node build/test.js
