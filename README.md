@@ -1,6 +1,6 @@
 # hxcommonjs
 
-You can using hxcommmonjs export commonjs modules.
+You can use hxcommmonjs export commonjs modules.
 
     hx.commonjs.Export.set("Hello", "Hello");
 
