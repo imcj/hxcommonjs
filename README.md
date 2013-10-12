@@ -2,6 +2,12 @@
 
 You can use hxcommmonjs export commonjs modules.
 
+## Install
+
+    haxelib install hxcommonjs
+
+## Usage
+
     hx.commonjs.Export.set("Hello", "Hello");
 
 parameter 1 is field of exports, and 2 is class name.
