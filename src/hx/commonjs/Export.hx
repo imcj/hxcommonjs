@@ -1,35 +1,36 @@
 package hx.commonjs;
 
+#if macro
 import haxe.macro.Context;
 import haxe.macro.Expr;
+#end
 
+@:autoBuild(hx.commonjs.Macro.build())
 class Export
 {
-    static public var initialized:Bool = false;
-
-    macro
-    static public function set(field:String, className:String):Expr
+    #if macro
+    static function ident(const):String
     {
-        if (!initialized) {
-            Context.defineType(
-            {
-                pos: Context.currentPos(),
-                params:[],
-                pack:["module"],
-                name: "exports",
-                meta: [],
-                kind: TDClass(),
-                isExtern: false,
-                fields: []
+        var id:String = "";
+        switch(const) {
+            case EConst(c): {
+                trace("hello");
+                switch (c) {
+                    case CIdent(s): {
+                        id = s;
+                    }
+                    default:
+                }
             }
-            );
-
-            initialized = true;
+            default:
         }
 
-        return Context.parse("Reflect.setField(Type.resolveClass(" + 
-                             "\"module.exports\"), \"" + field + "\", " + 
-                             className + ")", 
-                             Context.currentPos());
+        return id;
+    }
+    #end
+
+    function include(arg)
+    {
+
     }
 }
